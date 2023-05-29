@@ -1,8 +1,7 @@
-# Git repositories in PythonEDA
+# Infrastructure layer of PythonEDA Git Repositories
 
-This package includes the domain of Git repositories in PythonEDA.
+This package includes the infrastructure layer of PythonEDA Git Repositories package.
 
-This is what this package  provides:
-- PythonEDAGitRepositories/git_repo: A representation of Git repositories.
-- PythonEDAGitRepositories/git_repo_repo: A repository to retrieve instances of GitRepo.
-- PythonEDAGitRepositories/*: errors related to git operations.
+This package provides:
+- PythonEDAGitRepositoriesInfrastructure/github_repo.py: A git repository hosted in Github.
+- PythonEDAGitRepositoriesInfrastructure/github_git_repo.py: A PythonEDA repository to retrieve instances of GithubRepo.
