@@ -59,12 +59,15 @@
     "pythoneda": {
       "inputs": {
         "flake-utils": [
+          "pythoneda-git-repositories",
           "flake-utils"
         ],
         "nixos": [
+          "pythoneda-git-repositories",
           "nixos"
         ],
         "poetry2nix": [
+          "pythoneda-git-repositories",
           "poetry2nix"
         ]
       },
@@ -83,12 +86,71 @@
         "type": "github"
       }
     },
+    "pythoneda-git-repositories": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ],
+        "poetry2nix": [
+          "poetry2nix"
+        ],
+        "pythoneda": "pythoneda"
+      },
+      "locked": {
+        "lastModified": 1685388941,
+        "narHash": "sha256-42nylr9MYWShGC3/IDUjahI4DN782S/FbM4yzMot6Zg=",
+        "owner": "rydnr",
+        "repo": "pythoneda-git-repositories",
+        "rev": "3bad7181efb56d038b7bf5a152541ebde605b1dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rydnr",
+        "ref": "0.0.1a2",
+        "repo": "pythoneda-git-repositories",
+        "type": "github"
+      }
+    },
+    "pythoneda-infrastructure-layer": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixos": [
+          "nixos"
+        ],
+        "poetry2nix": [
+          "poetry2nix"
+        ],
+        "pythoneda": [
+          "pythoneda-git-repositories"
+        ]
+      },
+      "locked": {
+        "lastModified": 1685370238,
+        "narHash": "sha256-fFYwQQiKVbuxis5dV9aBWpaXFZwvElpV3dQTMoxQ8lE=",
+        "owner": "rydnr",
+        "repo": "pythoneda-infrastructure-layer",
+        "rev": "c2d72d758c6dbc09f7185345e6d6cec55efa949f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rydnr",
+        "ref": "0.0.1a1",
+        "repo": "pythoneda-infrastructure-layer",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixos": "nixos",
         "poetry2nix": "poetry2nix",
-        "pythoneda": "pythoneda"
+        "pythoneda-git-repositories": "pythoneda-git-repositories",
+        "pythoneda-infrastructure-layer": "pythoneda-infrastructure-layer"
       }
     }
   },
