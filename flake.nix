@@ -9,15 +9,22 @@
       inputs.nixpkgs.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
     };
+    pythoneda = {
+      url = "github:rydnr/pythoneda/0.0.1a5";
+      inputs.nixos.follows = "nixos";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.poetry2nix.follows = "poetry2nix";
+    };
     pythoneda-git-repositories = {
-      url = "github:rydnr/pythoneda-git-repositories/0.0.1a2";
+      url = "github:rydnr/pythoneda-git-repositories/0.0.1a3";
+      inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
     pythoneda-infrastructure-layer = {
-      url = "github:rydnr/pythoneda-infrastructure-layer/0.0.1a1";
-      inputs.pythoneda.follows = "pythoneda-git-repositories";
+      url = "github:rydnr/pythoneda-infrastructure-layer/0.0.1a2";
+      inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
@@ -38,7 +45,7 @@
           pythoneda-git-repositories-infrastructure =
             pythonPackages.buildPythonPackage rec {
               pname = "pythoneda-git-repositories-infrastructure";
-              version = "0.0.1a2";
+              version = "0.0.1a3";
               src = ./.;
               format = "pyproject";
 
