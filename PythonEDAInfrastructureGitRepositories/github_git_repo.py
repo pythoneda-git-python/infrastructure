@@ -1,6 +1,6 @@
 from PythonEDAGitRepositories.git_repo import GitRepo
 from PythonEDAGitRepositories.git_repo_repo import GitRepoRepo
-from PythonEDAGitRepositoriesInfrastructure.github_repo import GithubRepo
+from PythonEDAInfrastructureGitRepositories.github_repo import GithubRepo
 
 import requests
 

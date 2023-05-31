@@ -47,7 +47,7 @@
           pythoneda-infrastructure-git-repositories =
             pythonPackages.buildPythonPackage rec {
               pname = "pythoneda-infrastructure-git-repositories";
-              version = "0.0.1a4";
+              version = "0.0.1a5";
               src = ./.;
               format = "pyproject";
 
