@@ -69,17 +69,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1685370987,
-        "narHash": "sha256-N8VF0yTdVimxLgIR9y8j1XleuIJxtBNflIPGBc6AyDw=",
-        "owner": "rydnr",
-        "repo": "pythoneda",
-        "rev": "c82d4288068473673e7cb85a4ae19cb40b3d9758",
+        "lastModified": 1685546820,
+        "narHash": "sha256-l2vabcrpvFAApLXmgoe2AA4qmB9bg7eWcWuY2x7ignY=",
+        "owner": "pythoneda",
+        "repo": "base",
+        "rev": "7e6a957fcffea9ad2505325fa674825c29182106",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a5",
-        "repo": "pythoneda",
+        "owner": "pythoneda",
+        "ref": "0.0.1a7",
+        "repo": "base",
         "type": "github"
       }
     },
@@ -99,21 +99,21 @@
         ]
       },
       "locked": {
-        "lastModified": 1685389975,
-        "narHash": "sha256-m4XtFsIQD6WQVgcbozgowFbL+p4w6fVA0jMO+4Gx6eI=",
-        "owner": "rydnr",
-        "repo": "pythoneda-git-repositories",
-        "rev": "ec6dcafe4a712acfc615ea6e31d9add95abf4f40",
+        "lastModified": 1685549018,
+        "narHash": "sha256-rD5EBtJlD6KygN17rjOLoIDpeCE6p1EGmrGCvRmRbPs=",
+        "owner": "pythoneda",
+        "repo": "git-repositories",
+        "rev": "7df25b5e468d1bb9f46f57b1118f910dd24e9f23",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a3",
-        "repo": "pythoneda-git-repositories",
+        "owner": "pythoneda",
+        "ref": "0.0.1a4",
+        "repo": "git-repositories",
         "type": "github"
       }
     },
-    "pythoneda-infrastructure-layer": {
+    "pythoneda-infrastructure-base": {
       "inputs": {
         "flake-utils": [
           "flake-utils"
@@ -129,17 +129,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1685389722,
-        "narHash": "sha256-DhyX0kbomluWNJPIHqTokAeCnHbAUhLtCad3A3H96PQ=",
-        "owner": "rydnr",
-        "repo": "pythoneda-infrastructure-layer",
-        "rev": "d66c306048516ca9e1f6543b6fd54ba05d9d2f23",
+        "lastModified": 1685548515,
+        "narHash": "sha256-8G5kxz3c9iPTNrJ0DJY3kvsvlaBF2HvkhmAZtOu2fCU=",
+        "owner": "pythoneda-infrastructure",
+        "repo": "base",
+        "rev": "41792cfa371e7c5f4c36b0a12a7a3bbe7bfe7c5c",
         "type": "github"
       },
       "original": {
-        "owner": "rydnr",
-        "ref": "0.0.1a2",
-        "repo": "pythoneda-infrastructure-layer",
+        "owner": "pythoneda-infrastructure",
+        "ref": "0.0.1a5",
+        "repo": "base",
         "type": "github"
       }
     },
@@ -150,7 +150,7 @@
         "poetry2nix": "poetry2nix",
         "pythoneda": "pythoneda",
         "pythoneda-git-repositories": "pythoneda-git-repositories",
-        "pythoneda-infrastructure-layer": "pythoneda-infrastructure-layer"
+        "pythoneda-infrastructure-base": "pythoneda-infrastructure-base"
       }
     }
   },

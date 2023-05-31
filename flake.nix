@@ -10,20 +10,20 @@
       inputs.flake-utils.follows = "flake-utils";
     };
     pythoneda = {
-      url = "github:rydnr/pythoneda/0.0.1a5";
+      url = "github:pythoneda/base/0.0.1a7";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
     pythoneda-git-repositories = {
-      url = "github:rydnr/pythoneda-git-repositories/0.0.1a3";
+      url = "github:pythoneda/git-repositories/0.0.1a4";
       inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "poetry2nix";
     };
-    pythoneda-infrastructure-layer = {
-      url = "github:rydnr/pythoneda-infrastructure-layer/0.0.1a2";
+    pythoneda-infrastructure-base = {
+      url = "github:pythoneda-infrastructure/base/0.0.1a5";
       inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
@@ -39,13 +39,15 @@
         pythonPackages = python.pkgs;
         description = "Infrastructure layer of PythonEDA Git Repositories";
         license = pkgs.lib.licenses.gpl3;
+        homepage =
+          "https://github.com/pythoneda-infrastructure/git-repositories";
         maintainers = with pkgs.lib.maintainers; [ ];
       in rec {
         packages = {
-          pythoneda-git-repositories-infrastructure =
+          pythoneda-infrastructure-git-repositories =
             pythonPackages.buildPythonPackage rec {
-              pname = "pythoneda-git-repositories-infrastructure";
-              version = "0.0.1a3";
+              pname = "pythoneda-infrastructure-git-repositories";
+              version = "0.0.1a4";
               src = ./.;
               format = "pyproject";
 
@@ -53,7 +55,7 @@
 
               propagatedBuildInputs = with pythonPackages; [
                 pythoneda-git-repositories.packages.${system}.pythoneda-git-repositories
-                pythoneda-infrastructure-layer.packages.${system}.pythoneda-infrastructure-layer
+                pythoneda-infrastructure-base.packages.${system}.pythoneda-infrastructure-base
               ];
 
               checkInputs = with pythonPackages; [ pytest ];
@@ -64,7 +66,7 @@
                 inherit description license homepage maintainers;
               };
             };
-          default = packages.pythoneda-git-repositories-infrastructure;
+          default = packages.pythoneda-infrastructure-git-repositories;
           meta = with lib; {
             inherit description license homepage maintainers;
           };
